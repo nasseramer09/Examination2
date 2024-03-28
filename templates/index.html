@@ -1,34 +1,5 @@
 {%extends "layout.html"%}
 {% block body %}
-<h2>Diabetes Prediction Form</h2>
-<form id="DiabetesForm" action="/predict" method="POST">
-
-<label for="pregnancies">Number of pregnancies</label><br>
-<input type="number" id="pregnancies" name="pregnancies" required><br><br>
-
-<label for="glucose">Glucose level (mg/dl)</label><br>
-<input type="number" id="glucose" name="glucose" required><br><br>
-
-<label for="bloodPressure">Blood Pressure (mmHg)</label><br>
-<input type="number" id="bloodPressure" name="bloodPressure" required><br><br>
-
-<label for="skinThickness">Skin Thickness (mm)</label><br>
-<input type="number" id="skinThickness" name="skinThickness" required><br><br>
-
-<label for="insulin">Insulin level</label><br>
-<input type="number" id="insulin" name="insulin" required><br><br>
-
-<label for="bmi">Body Mass Index</label><br>
-<input type="number" id="bmi" name="bmi" step="0.01"><br><br>
-
-<label for="dpf">Diabetes Pedigree Function</label><br>
-<input type="number" id="dpf" name="dpf" step="0.01" required><br><br>
-
-<label for="age">Age:</label><br>
-<input type="number" id="age" name="Age" required><br><br>
-
-<input type="submit" value="predict">
-</form><br><br>
-
+<h2>Diabetes Prediction </h2>
 {{prediction_text}}
 {% endblock %}

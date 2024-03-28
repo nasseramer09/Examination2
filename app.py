@@ -27,7 +27,7 @@ def login():
 
 @app.route("/predict", methods=["POST"])
 def predict_diabetes():
-   
+
     features= [float(x) for x in request.form.values()]
     feature_names=['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin',
        'BMI', 'DiabetesPedigreeFunction', 'Age']
