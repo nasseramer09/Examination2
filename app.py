@@ -41,9 +41,9 @@ def predict_diabetes():
     output= prediction[0]
     
     if output==1:
-        return render_template('index.html', prediction_text=f"Based on the given values, it is with probability of {diabetes_probabilty*100:.2f}% that this person likly to have diabetes ")
+        return jsonify({'prediction': 'Diabetes', 'accuracy':diabetes_probabilty})
     else:
-        return render_template('index.html', prediction_text=f"Based on the given values, it is with probability of {diabetes_probabilty*100:.2f}% that this person likly to have diabetes ")
+        return jsonify({'prediction': 'No Diabetes', 'accuracy':1-diabetes_probabilty})
 
 if __name__=="__main__":
     app.run(debug=True)
